@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+import Header from './components/header/header';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      <Header/>
     </div>
   );
 }
