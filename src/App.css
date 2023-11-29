@@ -1,3 +1,18 @@
-li{
+li {
   list-style: none;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
+  position: relative;
+  /* Establece un contexto de posicionamiento para el pie de página absoluto */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
