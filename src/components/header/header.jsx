@@ -26,10 +26,15 @@ function Header() {
     <div className="navbar-area">
       <div className="container">
         <nav className="site-navbar d-flex justify-content-between align-items-center">
-          <a href="#inicio" className="site-logo">
-            Cine SL
-          </a>
-
+          <div>
+            <img className="logo" src="./images/logo.png" alt="Logo" />
+          </div>
+          <div>
+            <form class="search-form">
+              <input type="text" placeholder="Buscar películas..." class="search-input"></input>
+              <button type="submit" class="search-button">Buscar</button>
+            </form>
+          </div>
           <ul className={menuOpen ? "open" : ""} onClick={closeMenu}>
             <li
               onMouseEnter={openSubmenu}
@@ -44,30 +49,30 @@ function Header() {
                   <div className="submenu row" onMouseLeave={closeSubmenu}>
                     <ul className="col-6 d-flex flex-column space-between">
                       <li className="liSubmenu">
-                        <a className="text-primary aSubmenu" href="#accion">Acción</a>
+                        <a className="aSubmenu" href="#accion">Acción</a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="text-primary aSubmenu" href="#aventura">Aventura</a>
+                        <a className="aSubmenu" href="#aventura">Aventura</a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="text-primary aSubmenu" href="#cienciaFiccion">Ciencia Ficción</a>
+                        <a className="aSubmenu" href="#cienciaFiccion">Ciencia Ficción</a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="text-primary aSubmenu" href="#comedia">Comedia</a>
+                        <a className="aSubmenu" href="#comedia">Comedia</a>
                       </li>
                     </ul>
                     <ul className="col-6 d-flex flex-column space-between">
                       <li className="liSubmenu">
-                        <a className="text-primary aSubmenu" href="#crimen">Crimen</a>
+                        <a className="aSubmenu" href="#crimen">Crimen</a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="text-primary aSubmenu" href="#romance">Romance</a>
+                        <a className="aSubmenu" href="#romance">Romance</a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="text-primary aSubmenu" href="#suspenso">Suspenso</a>
+                        <a className="aSubmenu" href="#suspenso">Suspenso</a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="text-primary aSubmenu" href="#terror">Terror</a>
+                        <a className="aSubmenu" href="#terror">Terror</a>
                       </li>
                     </ul>
                   </div>

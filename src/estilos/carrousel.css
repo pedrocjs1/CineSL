@@ -1,0 +1,20 @@
+.marcoPelis {
+    gap: 3px;
+    padding: 3px;
+    padding-top: 10px;
+}
+
+.peli {
+    width: 192px;
+    height: 288px;
+    margin-bottom: 20px;
+}
+
+.pp {
+    color: #dee7e7;
+}
+
+.h1pub {
+    padding: 15px;
+    color: #dee7e7;
+}

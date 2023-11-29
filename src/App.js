@@ -4,13 +4,15 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './estilos/footer.css'
+import Carrousel from './components/carrousel/carrousel.jsx';
 
 function App() {
   return (
     <div className="App body">
       <Header />
+      <Carrousel />
       <Footer className="position-absolute p-0 w-100" />
-      <img src='https://picsum.photos/192/288'></img>
+
 
     </div>
   );

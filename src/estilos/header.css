@@ -3,7 +3,7 @@
     top: 0;*/
     left: 0;
     width: 100%;
-    background: rgb(0, 0, 0);
+    background-color: #282832;
     border-bottom: 1px solid #000;
     z-index: 999;
 }
@@ -112,30 +112,68 @@ a.site-logo {
     width: 100%;
     z-index: 1;
 }
+
 .aSubmenu {
-    font-size: 9px;
+    font-size: 13px;
+    color: #c6d6d6;
 }
-  
+
 .submenu {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #000;
     padding: 5px;
     max-height: 400px;
     width: 15rem;
     overflow-y: auto;
-    z-index: 2; /* Ajusta según sea necesario */
+    z-index: 2;
+    /* Ajusta según sea necesario */
+}
+
+.logo {
+    width: 300px;
+    height: 135px;
 }
 
 .space-between {
     justify-content: space-between;
- }
+}
 
 .site-navbar ul li {
     position: relative;
 }
+
+/* En tu archivo CSS o SCSS */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 400px;
+    /* Ajusta según tus necesidades */
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #a92727;
+    /* Color del botón */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #77181e;
+    /* Color del botón al pasar el mouse */
+}
+
 
 @media screen and (max-width: 767px) {
     .container {
@@ -192,9 +230,11 @@ a.site-logo {
         position: relative;
         width: 100%;
     }
-    
+
     .submenu {
-        max-height: none; /* Elimina la altura máxima en pantallas más pequeñas */
-        top: 0; /* Puede variar según tus necesidades */
+        max-height: none;
+        /* Elimina la altura máxima en pantallas más pequeñas */
+        top: 0;
+        /* Puede variar según tus necesidades */
     }
 }
