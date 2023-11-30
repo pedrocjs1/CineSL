@@ -30,49 +30,65 @@ function Header() {
             <img className="logo" src="./images/logo.png" alt="Logo" />
           </div>
           <div>
-            <form class="search-form">
-              <input type="text" placeholder="Buscar películas..." class="search-input"></input>
-              <button type="submit" class="search-button">Buscar</button>
+            <form className="search-form">
+              <input
+                type="text"
+                placeholder="Buscar películas..."
+                className="search-input"
+              ></input>
+              <button type="submit" className="search-button">
+                Buscar
+              </button>
             </form>
           </div>
           <ul className={menuOpen ? "open" : ""} onClick={closeMenu}>
-            <li
-              onMouseEnter={openSubmenu}
-              onMouseLeave={closeSubmenu}
-            >
-              <a
-                className="bs-link-color"
-                href="#generos"
-              >
+            <li onMouseEnter={openSubmenu} onMouseLeave={closeSubmenu}>
+              <a className="bs-link-color" href="#generos">
                 Generos
                 {submenuOpen && (
                   <div className="submenu row" onMouseLeave={closeSubmenu}>
                     <ul className="col-6 d-flex flex-column space-between">
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#accion">Acción</a>
+                        <a className="aSubmenu" href="#accion">
+                          Acción
+                        </a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#aventura">Aventura</a>
+                        <a className="aSubmenu" href="#aventura">
+                          Aventura
+                        </a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#cienciaFiccion">Ciencia Ficción</a>
+                        <a className="aSubmenu" href="#cienciaFiccion">
+                          Ciencia Ficción
+                        </a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#comedia">Comedia</a>
+                        <a className="aSubmenu" href="#comedia">
+                          Comedia
+                        </a>
                       </li>
                     </ul>
                     <ul className="col-6 d-flex flex-column space-between">
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#crimen">Crimen</a>
+                        <a className="aSubmenu" href="#crimen">
+                          Crimen
+                        </a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#romance">Romance</a>
+                        <a className="aSubmenu" href="#romance">
+                          Romance
+                        </a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#suspenso">Suspenso</a>
+                        <a className="aSubmenu" href="#suspenso">
+                          Suspenso
+                        </a>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#terror">Terror</a>
+                        <a className="aSubmenu" href="#terror">
+                          Terror
+                        </a>
                       </li>
                     </ul>
                   </div>
