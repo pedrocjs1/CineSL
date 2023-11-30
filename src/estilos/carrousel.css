@@ -32,3 +32,36 @@
     padding: 15px;
     color: #dee7e7;
 }
+
+
+@media screen and (max-width: 1400px) {
+    .peli {
+        width: 153.6px;
+        height: 230.4px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
+        border: 2px solid #000;
+        /* Ancho y color del borde */
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .peli {
+        width: 134.4px;
+        height: 201.6px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
+        border: 2px solid #000;
+        /* Ancho y color del borde */
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .col-md-2 {
+        width: 25%;
+    }
+}
