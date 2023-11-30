@@ -16,6 +16,7 @@ function Footer() {
                 <ItemFooter
                     parametro={items2}
                 />
+                <img className="moviedb" src="./images/moviedb.png" alt="Logo" />
             </div>
             <div className="d-flex justify-content-center ">
                 <h4>All right reserved</h4>

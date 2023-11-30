@@ -6,7 +6,6 @@ function Carrousel() {
         <div className="container">
             <h1 className="h1pub">Ultimas peliculas publicadas</h1>
             <div className="row">
-                <div></div>
                 <div className="col-2 marcoPelis">
                     <img className="peli" src='./images/movies/freelance.png' alt="Peli1"></img>
                     <p className="d-flex justify-content-center pp">Freelance</p>
