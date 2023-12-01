@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "../../estilos/header.css";
+import { FaSearch } from "react-icons/fa";
 
 function Header({ onSearch }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const [search, setSearch] = useState("");
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -40,16 +42,18 @@ function Header({ onSearch }) {
           </div>
           <div>
             <form className="search-form" onSubmit={handleSearchSubmit}>
-              <input
-                onChange={handleSearchValue}
-                value={search}
-                type="text"
-                placeholder="Buscar películas..."
-                className="search-input"
-              ></input>
-              <button type="submit" className="search-button">
-                Buscar
-              </button>
+              <div className="search-group">
+                <input
+                  onChange={handleSearchValue}
+                  value={search}
+                  type="text"
+                  placeholder="Buscar películas..."
+                  className="search-input"
+                ></input>
+                <button type="submit" className="search-button">
+                  <FaSearch />
+                </button>
+              </div>
             </form>
           </div>
           <ul className={menuOpen ? "open" : ""} onClick={closeMenu}>

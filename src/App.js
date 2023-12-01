@@ -6,7 +6,6 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "./estilos/footer.css";
 import ContainerMovie from "./components/carrousel/containerMovie.jsx";
 import { useState } from "react";
-import { useState } from "react";
 
 function App() {
   const [searchValue, setSearchValue] = useState("");
