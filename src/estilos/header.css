@@ -1,16 +1,16 @@
 .navbar-area {
-    /*position: fixed; //fixed-top dsadsadsa
+  /*position: fixed; //fixed-top dsadsadsa
     top: 0;*/
-    left: 0;
-    width: 100%;
-    background-color: #282832;
-    border-bottom: 1px solid #000;
-    z-index: 999;
+  left: 0;
+  width: 100%;
+  background-color: #282832;
+  border-bottom: 1px solid #000;
+  z-index: 999;
 }
 
 .main-content {
-    margin-top: 80px;
-    /* la altura del navbar + un margen adicional */
+  margin-top: 80px;
+  /* la altura del navbar + un margen adicional */
 }
 
 /*.site-navbar { litochau
@@ -19,74 +19,74 @@
     align-items: center; //align-items-center
   }*/
 a.site-logo {
-    font-size: 26px;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
 }
 
 .site-navbar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
 }
 
 .site-navbar ul li a {
-    color: #fff;
-    padding: 20px;
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .site-navbar ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* navbar regular css end */
 
 /* nav-toggler css start */
 .nav-toggler {
-    border: none;
-    padding: 5px;
-    background-color: transparent;
-    cursor: pointer;
-    height: 39px;
-    display: none;
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
 }
 
 .nav-toggler span,
 .nav-toggler span:before,
 .nav-toggler span:after {
-    width: 28px;
-    height: 3px;
-    background-color: #fff;
-    display: block;
-    transition: 0.3s;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
 }
 
 .nav-toggler span:before {
-    content: "";
-    transform: translateY(-9px);
+  content: "";
+  transform: translateY(-9px);
 }
 
 .nav-toggler span:after {
-    content: "";
-    transform: translateY(6px);
+  content: "";
+  transform: translateY(6px);
 }
 
 .nav-toggler.toggler-open span {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .nav-toggler.toggler-open span:before {
-    transform: translateY(0px) rotate(45deg);
+  transform: translateY(0px) rotate(45deg);
 }
 
 .nav-toggler.toggler-open span:after {
-    transform: translateY(-2px) rotate(-45deg);
+  transform: translateY(-2px) rotate(-45deg);
 }
 
 .btn-primary:hover,
@@ -94,187 +94,213 @@ a.site-logo {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    border-color: #17d0d5;
-    color: #fff;
-    background-color: #17d0d5;
+  border-color: #17d0d5;
+  color: #fff;
+  background-color: #17d0d5;
 }
 
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    background-image: none;
+  background-image: none;
 }
 
 .submenu-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .aSubmenu {
-    font-size: 13px;
-    color: #c6d6d6;
+  font-size: 13px;
+  color: #c6d6d6;
 }
 
 .submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #000;
-    padding: 5px;
-    max-height: 400px;
-    width: 15rem;
-    overflow-y: auto;
-    z-index: 2;
-    /* Ajusta según sea necesario */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000;
+  padding: 5px;
+  max-height: 400px;
+  width: 15rem;
+  overflow-y: auto;
+  z-index: 2;
+  /* Ajusta según sea necesario */
 }
 
 .logo {
-    width: 300px;
-    height: 135px;
+  width: 300px;
+  height: 135px;
 }
 
 .space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .site-navbar ul li {
-    position: relative;
+  position: relative;
 }
 
 /* En tu archivo CSS o SCSS */
 .search-form {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 400px;
+  /* Ajusta según tus necesidades */
+}
+
+.search-button {
+  padding: 10px;
+  background-color: #a92727;
+  /* Color del botón */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #77181e;
+  /* Color del botón al pasar el mouse */
+}
+
+.search-group {
+  position: relative;
+  display: flex;
+}
+
+.search-input {
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.search-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: none;
+  background: transparent;
+  padding: 10px 17px 10px 10px;
+  cursor: pointer;
+  color: #555;
+}
+
+.search-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+  .search-input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
-    width: 400px;
-    /* Ajusta según tus necesidades */
+    width: 300px;
+  }
 }
 
-.search-button {
+@media screen and (max-width: 1200px) {
+  .search-input {
     padding: 10px;
-    background-color: #a92727;
-    /* Color del botón */
-    color: #fff;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-button:hover {
-    background-color: #77181e;
-    /* Color del botón al pasar el mouse */
-}
-
-@media screen and (max-width: 1400px) {
-    .search-input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-right: 10px;
-        width: 300px;
-        /* Ajusta según tus necesidades */
-    }
+    margin-right: 10px;
+    width: 200px;
+    /* Ajusta según tus necesidades */
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .search-input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-right: 10px;
-        width: 200px;
-        /* Ajusta según tus necesidades */
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .search-input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-right: 10px;
-        width: 150px;
-        /* Ajusta según tus necesidades */
-    }
-
-
+  .search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 150px;
+    /* Ajusta según tus necesidades */
+  }
 }
 
 @media screen and (max-width: 990px) {
-    .container {
-        max-width: 720px;
-    }
+  .container {
+    max-width: 720px;
+  }
 
-    /* navbar css for mobile start */
-    .nav-toggler {
-        display: block;
-    }
+  /* navbar css for mobile start */
+  .nav-toggler {
+    display: block;
+  }
 
-    .site-navbar {
-        min-height: 60px;
-    }
+  .site-navbar {
+    min-height: 60px;
+  }
 
-    .site-navbar ul {
-        position: absolute;
-        width: 100%;
-        height: 350px;
-        left: 0;
-        top: 0px;
-        flex-direction: column;
-        align-items: center;
-        border-top: 1px solid #444;
-        background-color: rgba(0, 0, 0, 0.75);
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.3s;
-        justify-content: center;
-    }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    left: 0;
+    top: 0px;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(0, 0, 0, 0.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    justify-content: center;
+  }
 
-    .submenu {
-        visibility: hidden;
-    }
+  .submenu {
+    visibility: hidden;
+  }
 
-    .site-navbar ul li {
-        width: 100%;
-        text-align: center;
-    }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
 
-    .site-navbar ul li a {
-        padding: 25px;
-    }
+  .site-navbar ul li a {
+    padding: 25px;
+  }
 
-    .site-navbar ul li a:hover {
-        background-color: rgba(0, 0, 0, 0.295);
-    }
+  .site-navbar ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.295);
+  }
 
-    .site-navbar ul.open {
-        max-height: 100vh;
-        overflow: visible;
-    }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
 
-    .intro-area h2 {
-        font-size: 36px;
-        margin-bottom: 15px;
-    }
+  .intro-area h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
 
-    .submenu-container {
-        position: relative;
-        width: 100%;
-    }
+  .submenu-container {
+    position: relative;
+    width: 100%;
+  }
 
-    .submenu {
-        max-height: none;
-        /* Elimina la altura máxima en pantallas más pequeñas */
-        top: 0;
-        /* Puede variar según tus necesidades */
-    }
+  .submenu {
+    max-height: none;
+    /* Elimina la altura máxima en pantallas más pequeñas */
+    top: 0;
+    /* Puede variar según tus necesidades */
+  }
 }

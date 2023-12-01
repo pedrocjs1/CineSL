@@ -2,8 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../../estilos/carrousel.css";
 import { getPopularMovies } from "../../data/httpClient";
 
-function ContainerMovie() {
+function ContainerMovie({ searchV = "" }) {
   const [movies, setMovies] = useState([]);
+
+  const filterSearch = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(searchV.toLowerCase())
+  );
 
   useEffect(() => {
     getPopularMovies()
@@ -18,9 +22,9 @@ function ContainerMovie() {
 
   return (
     <div className="container">
-      <h1 className="h1pub">Ultimas peliculas publicadas</h1>
+      <h1 className="h1pub">Películas populares</h1>
       <div className="row">
-        {movies.map((movies) => {
+        {filterSearch.map((movies) => {
           return (
             <div
               key={movies.id}
@@ -28,12 +32,10 @@ function ContainerMovie() {
             >
               <img
                 className="peli img-fluid"
-                src={`https://image.tmdb.org/t/p/w300${movies.backdrop_path}`}
-                alt={`${movies.original_title}`}
+                src={`https://image.tmdb.org/t/p/w300${movies.poster_path}`}
+                alt={`${movies.title}`}
               ></img>
-              <p className="d-flex justify-content-center pp">
-                {movies.original_title}
-              </p>
+              <p className="d-flex justify-content-center pp">{movies.title}</p>
             </div>
           );
         })}

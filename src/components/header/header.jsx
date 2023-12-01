@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "../../estilos/header.css";
 
-function Header() {
+function Header({ onSearch }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
-
+  const [search, setSearch] = useState("");
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -22,6 +22,15 @@ function Header() {
     setSubmenuOpen(false); // Agregamos esto para asegurarnos de que el submenu se cierre cuando se cierra el menú principal
   };
 
+  const handleSearchValue = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const handleSearchSubmit = (evento) => {
+    evento.preventDefault();
+    onSearch(search);
+  };
+
   return (
     <div className="navbar-area">
       <div className="container">
@@ -30,8 +39,10 @@ function Header() {
             <img className="logo" src="./images/logo.png" alt="Logo" />
           </div>
           <div>
-            <form className="search-form">
+            <form className="search-form" onSubmit={handleSearchSubmit}>
               <input
+                onChange={handleSearchValue}
+                value={search}
                 type="text"
                 placeholder="Buscar películas..."
                 className="search-input"
