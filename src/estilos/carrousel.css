@@ -5,8 +5,8 @@
 }
 
 .peli {
-    width: 192px;
-    height: 288px;
+    max-width: 100%;
+    min-height: 20rem;
     margin-bottom: 20px;
     border-radius: 10px;
     /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
@@ -36,8 +36,6 @@
 
 @media screen and (max-width: 1400px) {
     .peli {
-        width: 153.6px;
-        height: 230.4px;
         margin-bottom: 20px;
         border-radius: 10px;
         /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
@@ -49,8 +47,6 @@
 
 @media screen and (max-width: 1200px) {
     .peli {
-        width: 134.4px;
-        height: 201.6px;
         margin-bottom: 20px;
         border-radius: 10px;
         /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
