@@ -18,5 +18,5 @@ const httpClient = axios.create({
 });
 
 export const getPopularMovies = () => {
-  return httpClient.get("/movie/popular");
+  return httpClient.get("discover/movie");
 };
