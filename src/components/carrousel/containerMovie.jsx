@@ -3,7 +3,6 @@ import "../../estilos/carrousel.css";
 import { getPopularMovies } from "../../data/httpClient";
 
 function ContainerMovie({ searchV = "" }) {
-function ContainerMovie({ searchV = "" }) {
   const [movies, setMovies] = useState([]);
 
   const filterSearch = movies.filter((movie) =>
@@ -36,9 +35,7 @@ function ContainerMovie({ searchV = "" }) {
                 src={`https://image.tmdb.org/t/p/w300${movies.poster_path}`}
                 alt={`${movies.title}`}
               ></img>
-              <p className="d-flex justify-content-center pp">
-                {movies.original_title}
-              </p>
+              <p className="d-flex justify-content-center pp">{movies.title}</p>
             </div>
           );
         })}

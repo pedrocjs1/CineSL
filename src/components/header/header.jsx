@@ -5,7 +5,6 @@ function Header({ onSearch }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const [search, setSearch] = useState("");
-  const [search, setSearch] = useState("");
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -21,15 +20,6 @@ function Header({ onSearch }) {
   const closeMenu = () => {
     setMenuOpen(false);
     setSubmenuOpen(false); // Agregamos esto para asegurarnos de que el submenu se cierre cuando se cierra el menú principal
-  };
-
-  const handleSearchValue = (event) => {
-    setSearch(event.target.value);
-  };
-
-  const handleSearchSubmit = (evento) => {
-    evento.preventDefault();
-    onSearch(search);
   };
 
   const handleSearchValue = (event) => {
