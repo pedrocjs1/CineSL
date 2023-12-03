@@ -6,7 +6,8 @@
 
 .peli {
   max-width: 100%;
-  min-height: 20rem;
+  height: 288.9px;
+  width: 192.6px;
   margin-bottom: 20px;
   border-radius: 10px;
   /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
@@ -25,6 +26,7 @@
 .containeraes {
   min-height: 100vh;
   padding: 1rem 7rem 1rem 7rem;
+  width: 80vw;
 }
 
 .loader-container {
@@ -44,40 +46,13 @@
   color: #dee7e7;
 }
 
-@media screen and (max-width: 1400px) {
-  .peli {
-    margin-bottom: 20px;
-    border-radius: 10px;
-    /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
-    border: 2px solid #000;
-    /* Ancho y color del borde */
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .peli {
-    margin-bottom: 20px;
-    border-radius: 10px;
-    /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
-    border: 2px solid #000;
-    /* Ancho y color del borde */
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .col-md-2 {
-    width: 25%;
-  }
-}
-
 /* css de la pagination*/
 /* Contenedor principal de la paginzao */
 .pagination {
   display: flex;
   list-style-type: none;
   justify-content: center;
+  align-items: center;
   padding: 0;
 }
 
@@ -129,5 +104,52 @@
   .pagination li a {
     padding: 3px 6px;
     font-size: 12px;
+  }
+
+  .peli {
+    height: 173.34px;
+    width: 115.56px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .peli {
+    border-radius: 10px;
+    /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
+    border: 2px solid #000;
+    /* Ancho y color del borde */
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .peli {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /* Ajusta el valor según sea necesario para redondear más o menos las esquinas */
+    border: 2px solid #000;
+    /* Ancho y color del borde */
+    overflow: hidden;
+    height: 231.12px;
+    width: 154.08px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .col-md-2 {
+    width: 25%;
+  }
+
+  .peli {
+    height: 202.23px;
+    width: 134.82px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .peli {
+    height: 144.45px;
+    width: 96.3px;
   }
 }

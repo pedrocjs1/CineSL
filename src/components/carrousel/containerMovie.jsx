@@ -59,13 +59,13 @@ function ContainerMovie({ searchV = "" }) {
 
   return (
     <div className="containeraes">
-      <h1 className="h1pub">Películas populares</h1>
+      <h1 className="h1pub text-center">Películas populares</h1>
       <ReactPaginate
         previousLabel={<FaArrowLeft />}
         nextLabel={<FaArrowRight />}
         breakLabel={"..."}
         breakClassName={"break-me"}
-        pageCount={20}
+        pageCount={10}
         marginPagesDisplayed={2}
         pageRangeDisplayed={5}
         onPageChange={handlePageClick}
@@ -78,7 +78,7 @@ function ContainerMovie({ searchV = "" }) {
           return (
             <div
               key={movies.id}
-              className="col-lg-2 col-md-3 col-sm-6 marcoPelis d-flex flex-column align-items-center"
+              className="col-lg-3 col-md-4 col-sm-6 col-xs-12  marcoPelis d-flex flex-column align-items-center"
             >
               <img
                 className="peli img-fluid"
