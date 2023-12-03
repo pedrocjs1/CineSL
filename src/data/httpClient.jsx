@@ -20,3 +20,7 @@ const httpClient = axios.create({
 export const getPopularMovies = () => {
   return httpClient.get("discover/movie");
 };
+
+export const getMoviesByGenre = (genreId) => {
+  return httpClient.get(`/discover/movie?with_genres=${genreId}`);
+};

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../estilos/header.css";
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Header({ onSearch }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -64,46 +65,46 @@ function Header({ onSearch }) {
                   <div className="submenu row" onMouseLeave={closeSubmenu}>
                     <ul className="col-6 d-flex flex-column space-between">
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#accion">
+                        <Link to="/genero/28" className="aSubmenu">
                           Acción
-                        </a>
+                        </Link>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#aventura">
+                        <Link to="/genero/12" className="aSubmenu">
                           Aventura
-                        </a>
+                        </Link>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#cienciaFiccion">
-                          Ciencia Ficción
-                        </a>
+                        <Link to="/genero/16" className="aSubmenu">
+                          Animación
+                        </Link>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#comedia">
+                        <Link to="/genero/35" className="aSubmenu">
                           Comedia
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                     <ul className="col-6 d-flex flex-column space-between">
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#crimen">
+                        <Link to="/genero/80" className="aSubmenu">
                           Crimen
-                        </a>
+                        </Link>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#romance">
+                        <Link to="/genero/10749" className="aSubmenu">
                           Romance
-                        </a>
+                        </Link>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#suspenso">
-                          Suspenso
-                        </a>
+                        <Link to="/genero/9648" className="aSubmenu">
+                          Misterio
+                        </Link>
                       </li>
                       <li className="liSubmenu">
-                        <a className="aSubmenu" href="#terror">
+                        <Link to="/genero/27" className="aSubmenu">
                           Terror
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>

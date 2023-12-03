@@ -14,6 +14,38 @@ li {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  /* Asumiendo que estás utilizando create-react-app */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Asegúrate de que el contenido se expanda para llenar el espacio disponible */
+.content {
+  flex: 1;
+}
+
+.footer {
+  background-color: #282832;
+  color: #dee7e7;
+  padding: 20px;
+  border-top: 1px solid #000;
+  margin-top: auto; /* Mantiene el footer en la parte inferior */
 }
