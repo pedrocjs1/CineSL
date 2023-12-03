@@ -17,10 +17,16 @@ const httpClient = axios.create({
   },
 });
 
-export const getPopularMovies = () => {
-  return httpClient.get("discover/movie");
+export const getPopularMovies = (page = 1) => {
+  return httpClient.get(`discover/movie?page=${page}`);
 };
 
 export const getMoviesByGenre = (genreId) => {
   return httpClient.get(`/discover/movie?with_genres=${genreId}`);
+};
+
+export const searchMovies = (query, page = 1) => {
+  return httpClient.get(
+    `/search/movie?query=${encodeURIComponent(query)}&page=${page}`
+  );
 };

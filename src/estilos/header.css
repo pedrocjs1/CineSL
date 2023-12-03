@@ -169,11 +169,6 @@ a.site-logo {
   cursor: pointer;
 }
 
-.search-button:hover {
-  background-color: #77181e;
-  /* Color del botón al pasar el mouse */
-}
-
 .search-group {
   position: relative;
   display: flex;

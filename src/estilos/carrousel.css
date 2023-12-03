@@ -22,6 +22,11 @@
   /* Agrega una transición suave (opcional) */
 }
 
+.containeraes {
+  min-height: 100vh;
+  padding: 1rem 7rem 1rem 7rem;
+}
+
 .loader-container {
   display: flex;
   justify-content: center;
@@ -64,5 +69,65 @@
 @media screen and (max-width: 990px) {
   .col-md-2 {
     width: 25%;
+  }
+}
+
+/* css de la pagination*/
+/* Contenedor principal de la paginzao */
+.pagination {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Estilos para cada item de la pagination */
+.pagination li {
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.pagination li a {
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  color: #a92727 !important;
+}
+
+/* Estilos para los items activos (pag actual) */
+.pagination li.active a {
+  background-color: #2b2b2c;
+  color: #ffffff;
+  border-color: #c6d6d6;
+}
+
+/* (anterior/siguiente cuando no es posible la acción) */
+.pagination li.disabled a {
+  color: #000000;
+}
+
+/* Estilos para cuanndo se pasa el mouse arriba */
+
+/* Estilos para el item 'break' (los puntos suspensivos) */
+.pagination li.break a {
+  border: 0;
+  cursor: default;
+}
+
+/* 'anterior' y 'siguiente' */
+.pagination li.previous a,
+.pagination li.next a {
+  color: #282832;
+}
+
+@media (max-width: 768px) {
+  .pagination li a {
+    padding: 3px 6px;
+    font-size: 12px;
   }
 }

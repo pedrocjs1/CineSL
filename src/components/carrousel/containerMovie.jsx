@@ -1,28 +1,78 @@
 import React, { useState, useEffect } from "react";
 import "../../estilos/carrousel.css";
-import { getPopularMovies } from "../../data/httpClient";
+import { getPopularMovies, searchMovies } from "../../data/httpClient";
+import ReactPaginate from "react-paginate";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import ClipLoader from "react-spinners/ClipLoader";
 
 function ContainerMovie({ searchV = "" }) {
   const [movies, setMovies] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const filterSearch = movies.filter((movie) =>
     movie.title.toLowerCase().includes(searchV.toLowerCase())
   );
 
+  const handlePageClick = (data) => {
+    let selected = data.selected;
+    setCurrentPage(selected + 1);
+  };
+
   useEffect(() => {
-    getPopularMovies()
-      .then((response) => {
-        console.log(response);
-        setMovies(response.data.results);
-      })
-      .catch((error) => {
-        console.error("Error al traer las peliculas", error);
-      });
-  }, []);
+    if (searchV) {
+      setLoading(true);
+      searchMovies(searchV, currentPage)
+        .then((response) => {
+          setMovies(response.data.results);
+        })
+        .catch((error) => {
+          console.error("Error al buscar películas", error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    } else {
+      setLoading(true);
+      getPopularMovies(currentPage)
+        .then((response) => {
+          setMovies(response.data.results);
+        })
+        .catch((error) => {
+          console.error("Error al traer las películas populares", error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
+  }, [searchV, currentPage]);
+
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <ClipLoader color="#ffffff" size={150} />
+      </div>
+    );
+  }
+  if (error) return <div>Error al cargar las películas: {error.message}</div>;
 
   return (
-    <div className="container">
+    <div className="containeraes">
       <h1 className="h1pub">Películas populares</h1>
+      <ReactPaginate
+        previousLabel={<FaArrowLeft />}
+        nextLabel={<FaArrowRight />}
+        breakLabel={"..."}
+        breakClassName={"break-me"}
+        pageCount={20}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageClick}
+        containerClassName={"pagination"}
+        activeClassName={"active"}
+        forcePage={currentPage - 1}
+      />
       <div className="row">
         {filterSearch.map((movies) => {
           return (
@@ -39,6 +89,19 @@ function ContainerMovie({ searchV = "" }) {
             </div>
           );
         })}
+        <ReactPaginate
+          previousLabel={<FaArrowLeft />}
+          nextLabel={<FaArrowRight />}
+          breakLabel={"..."}
+          breakClassName={"break-me"}
+          pageCount={20}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination"}
+          activeClassName={"active"}
+          forcePage={currentPage - 1}
+        />
       </div>
     </div>
   );
