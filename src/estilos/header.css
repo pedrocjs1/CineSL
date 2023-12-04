@@ -199,36 +199,19 @@ a.site-logo {
 }
 
 @media screen and (max-width: 1400px) {
-  .search-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 300px;
+  .logo {
+    width: 270px;
+    height: 121.5px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .search-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 200px;
-    /* Ajusta según tus necesidades */
+  .logo {
+    width: 240px;
+    height: 108px;
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .search-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 150px;
-    /* Ajusta según tus necesidades */
-  }
-}
 
 @media screen and (max-width: 990px) {
   .container {
@@ -297,5 +280,17 @@ a.site-logo {
     /* Elimina la altura máxima en pantallas más pequeñas */
     top: 0;
     /* Puede variar según tus necesidades */
+  }
+
+  .logo {
+    width: 210px;
+    height: 94.5px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .logo {
+    width: 180px;
+    height: 81px;
   }
 }

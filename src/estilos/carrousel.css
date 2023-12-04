@@ -5,7 +5,7 @@
 }
 
 .peli {
-  max-width: 100%;
+  max-width: 100vw;
   height: 288.9px;
   width: 192.6px;
   margin-bottom: 20px;
@@ -122,7 +122,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .peli {
     margin-bottom: 20px;
     border-radius: 10px;
@@ -132,6 +132,15 @@
     overflow: hidden;
     height: 231.12px;
     width: 154.08px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 1066px) {
+  .peli {
+    height: 202.23px;
+    width: 134.82px;
   }
 }
 
@@ -139,14 +148,9 @@
   .col-md-2 {
     width: 25%;
   }
-
-  .peli {
-    height: 202.23px;
-    width: 134.82px;
-  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
 
   .peli {
     height: 144.45px;
