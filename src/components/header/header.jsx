@@ -22,7 +22,7 @@ function Header({ onSearch }) {
 
   const closeMenu = () => {
     setMenuOpen(false);
-    setSubmenuOpen(false); // Agregamos esto para asegurarnos de que el submenu se cierre cuando se cierra el menú principal
+    setSubmenuOpen(false);
   };
 
   const handleSearchValue = (event) => {
@@ -41,22 +41,7 @@ function Header({ onSearch }) {
           <div>
             <img className="logo" src="./images/logo.png" alt="Logo" />
           </div>
-          <div>
-            <form className="search-form" onSubmit={handleSearchSubmit}>
-              <div className="search-group">
-                <input
-                  onChange={handleSearchValue}
-                  value={search}
-                  type="text"
-                  placeholder="Buscar películas..."
-                  className="search-input"
-                ></input>
-                <button type="submit" className="search-button">
-                  <FaSearch />
-                </button>
-              </div>
-            </form>
-          </div>
+
           <ul className={menuOpen ? "open" : ""} onClick={closeMenu}>
             <li onMouseEnter={openSubmenu} onMouseLeave={closeSubmenu}>
               <a className="bs-link-color" href="#generos">
@@ -118,6 +103,21 @@ function Header({ onSearch }) {
               <a href="#series">Series</a>
             </li>
           </ul>
+
+          <form className="search-form" onSubmit={handleSearchSubmit}>
+            <div className="search-group">
+              <input
+                onChange={handleSearchValue}
+                value={search}
+                type="text"
+                placeholder="Buscar películas..."
+                className="search-input"
+              ></input>
+              <button type="submit" className="search-button">
+                <FaSearch />
+              </button>
+            </div>
+          </form>
           <button
             className={`nav-toggler ${menuOpen ? "toggler-open" : ""}`}
             onClick={toggleMenu}

@@ -10,7 +10,7 @@ li {
   /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
   position: relative;
   /* Establece un contexto de posicionamiento para el pie de página absoluto */
-  background-color: #77181e;
+  background-color: #000000;
 }
 
 code {

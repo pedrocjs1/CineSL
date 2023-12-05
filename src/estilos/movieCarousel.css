@@ -1,0 +1,72 @@
+.slick-slide {
+  padding: 10px;
+}
+
+.slick-prev,
+.slick-next {
+  color: #fff;
+  font-size: 24px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #fff;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}
+
+.btn-carousel {
+  background: none;
+  color: #fff;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .slick-slide img {
+    width: 100%;
+  }
+}
+.movie-slide {
+  position: relative;
+  margin: 10px;
+}
+
+.movie-slide img {
+  width: 100%;
+  border-radius: 10px; /* Ajusta para redondear las esquinas de las imágenes */
+}
+
+.movie-title {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  ); /* Degradado de negro a transparente */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .movie-slide img {
+    width: 100%;
+  }
+
+  .movie-title {
+    font-size: 0.8rem; /* Tamaño del texto más pequeño para dispositivos móviles */
+    bottom: 3px; /* Ajusta aún más la distancia desde la parte inferior para móviles */
+  }
+}

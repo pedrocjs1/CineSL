@@ -3,8 +3,8 @@
     top: 0;*/
   left: 0;
   width: 100%;
-  background-color: #282832;
-  border-bottom: 1px solid #000;
+  background-color: transparent;
+
   z-index: 999;
 }
 
@@ -211,7 +211,6 @@ a.site-logo {
     height: 108px;
   }
 }
-
 
 @media screen and (max-width: 990px) {
   .container {

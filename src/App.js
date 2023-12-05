@@ -6,8 +6,12 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./estilos/footer.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import ContainerMovie from "./components/carrousel/containerMovie.jsx";
 import ContainerMovieGenero from "./components/ContainerMovieGenero/ContainerMovieGenero.jsx";
+import MovieCarousel from "./components/MovieCarousel/MovieCarousel.jsx";
 
 function App() {
   const [searchValue, setSearchValue] = useState("");
@@ -19,7 +23,14 @@ function App() {
       <div className="App body content">
         <Header onSearch={handleValue} />
         <Routes>
-          <Route path="/" element={<ContainerMovie searchV={searchValue} />} />
+          {/* <Route path="/" element={<ContainerMovie searchV={searchValue} />} /> */}
+          <Route
+            path="/"
+            element={
+              <MovieCarousel genreId={27} genreName={"Peliculas de terror"} />
+            }
+          />
+
           <Route
             path="/genero/:id"
             element={<ContainerMovieGenero searchV={searchValue} />}
