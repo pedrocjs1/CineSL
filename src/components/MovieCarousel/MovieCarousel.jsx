@@ -75,7 +75,8 @@ const MovieCarousel = ({ genreId, genreName }) => {
         {movies.map((movie) => (
           <div key={movie.id} className="movie-slide">
             <img
-              src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
+              className=""
+              src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
               alt={movie.title}
             />
             <p className="movie-title">{movie.title}</p>
