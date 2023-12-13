@@ -3,7 +3,7 @@ import "../../estilos/header.css";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function Header({ onSearch }) {
+export default function Header({ onSearch }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -39,7 +39,11 @@ function Header({ onSearch }) {
       <div className="container">
         <nav className="site-navbar d-flex justify-content-between align-items-center">
           <div>
-            <img className="logo img-fluid" src="./images/cinesll.png" alt="Logo" />
+            <img
+              className="logo img-fluid"
+              src="./images/cineslll.png"
+              alt="Logo"
+            />
           </div>
 
           <ul className={menuOpen ? "open" : ""} onClick={closeMenu}>
@@ -129,5 +133,3 @@ function Header({ onSearch }) {
     </div>
   );
 }
-
-export default Header;

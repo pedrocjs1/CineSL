@@ -132,6 +132,7 @@ a.site-logo {
 }
 
 .logo {
+  margin-top: 12px;
   width: 300px;
   height: 135px;
 }

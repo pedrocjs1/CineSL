@@ -30,6 +30,7 @@ function ContainerMovieGenero({ searchV = "" }) {
           movie.title.toLowerCase().includes(searchV.toLowerCase())
         );
         setMovies(filteredMovies);
+        console.log(response.data.results);
       })
       .catch((error) => {
         setError(error);

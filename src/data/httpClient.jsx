@@ -25,6 +25,10 @@ export const getMoviesByGenre = (genreId) => {
   return httpClient.get(`/discover/movie?with_genres=${genreId}`);
 };
 
+export const getMovieById = (genreId) => {
+  return httpClient.get(`/find/${genreId}`);
+};
+
 export const searchMovies = (query, page = 1) => {
   return httpClient.get(
     `/search/movie?query=${encodeURIComponent(query)}&page=${page}`

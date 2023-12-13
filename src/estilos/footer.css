@@ -42,8 +42,13 @@ body {
   flex: 1;
 }
 
-.footer {
-  background-color: #282832;
+.logof {
+  width: 300px;
+  height: 66.6px;
+}
+
+.footerr {
+  background-color: #000;
   color: #dee7e7;
   padding: 20px;
   border-top: 1px solid #000;
