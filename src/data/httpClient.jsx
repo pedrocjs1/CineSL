@@ -34,3 +34,13 @@ export const searchMovies = (query, page = 1) => {
     `/search/movie?query=${encodeURIComponent(query)}&page=${page}`
   );
 };
+
+export const createMovie = (movieData) => {
+  return axios.post("http://localhost:4000/api/peliculas", movieData);
+};
+
+export const getMoviesForGeneros = (genero) => {
+  return axios.get(`http://localhost:4000/api/peliculas`, {
+    params: { genero: genero }, // Esto enviará un arreglo si genero es un arreglo
+  });
+};

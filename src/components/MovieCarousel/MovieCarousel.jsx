@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getMoviesByGenre } from "../../data/httpClient";
+import { getMoviesForGeneros } from "../../data/httpClient";
 import "../../estilos/movieCarousel.css";
 import Slider from "react-slick";
 import NextArrow from "./NextArrow.jsx";
@@ -11,9 +11,10 @@ const MovieCarousel = ({ genreId, genreName }) => {
 
   useEffect(() => {
     setLoading(true);
-    getMoviesByGenre(genreId)
+    getMoviesForGeneros(genreId)
       .then((response) => {
-        setMovies(response.data.results.slice(0, 15));
+        console.log("Datos recibidos:", response.data);
+        setMovies(response.data.slice(0, 15));
       })
       .catch((error) => {
         console.error("Error fetching movies by genre", error);
@@ -25,7 +26,7 @@ const MovieCarousel = ({ genreId, genreName }) => {
 
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -74,11 +75,7 @@ const MovieCarousel = ({ genreId, genreName }) => {
       <Slider {...settings}>
         {movies.map((movie) => (
           <div key={movie.id} className="movie-slide">
-            <img
-              className="imgg"
-              src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-              alt={movie.title}
-            />
+            <img className="imgg" src={movie.foto} alt={movie.title} />
             <p className="movie-title">{movie.title}</p>
           </div>
         ))}

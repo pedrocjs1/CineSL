@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getMoviesByGenre } from "../../data/httpClient";
+import { getMoviesForGeneros } from "../../data/httpClient";
 import ClipLoader from "react-spinners/ClipLoader";
 import "../../estilos/carrousel.css";
 function ContainerMovieGenero({ searchV = "" }) {
@@ -24,13 +24,13 @@ function ContainerMovieGenero({ searchV = "" }) {
 
   useEffect(() => {
     setLoading(true);
-    getMoviesByGenre(id)
+    getMoviesForGeneros(id)
       .then((response) => {
-        const filteredMovies = response.data.results.filter((movie) =>
-          movie.title.toLowerCase().includes(searchV.toLowerCase())
+        const filteredMovies = response.data.filter((movie) =>
+          movie.titulo.toLowerCase().includes(searchV.toLowerCase())
         );
         setMovies(filteredMovies);
-        console.log(response.data.results);
+        console.log(response.data);
       })
       .catch((error) => {
         setError(error);
@@ -61,10 +61,10 @@ function ContainerMovieGenero({ searchV = "" }) {
             >
               <img
                 className="peli img-fluid"
-                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                alt={`${movie.title}`}
+                src={movie.foto}
+                alt={`${movie.titulo}`}
               ></img>
-              <p className="d-flex justify-content-center pp">{movie.title}</p>
+              <p className="d-flex justify-content-center pp">{movie.titulo}</p>
             </div>
           );
         })}

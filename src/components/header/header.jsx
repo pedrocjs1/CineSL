@@ -39,11 +39,13 @@ export default function Header({ onSearch }) {
       <div className="container mb-2">
         <nav className="site-navbar d-flex justify-content-between align-items-center">
           <div>
-            <img
-              className="logo img-fluid"
-              src="./images/cineslll.png"
-              alt="Logo"
-            />
+            <a href="/">
+              <img
+                className="logo img-fluid"
+                src="/images/cineslll.png"
+                alt="Logo"
+              />
+            </a>
           </div>
 
           <ul className={menuOpen ? "open" : ""} onClick={closeMenu}>

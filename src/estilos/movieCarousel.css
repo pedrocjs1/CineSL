@@ -9,6 +9,7 @@
 .imgg {
   border: 2px solid #000000;
   border-radius: 10px;
+  max-height: 15rem !important;
 }
 
 .mov .slick-prev,
@@ -56,9 +57,11 @@
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.7) 30%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
   /* Degradado de negro a transparente */
   padding: 5px 10px;
   border-radius: 5px;

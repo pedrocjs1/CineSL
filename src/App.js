@@ -13,6 +13,7 @@ import ContainerMovie from "./components/carrousel/containerMovie.jsx";
 import ContainerMovieGenero from "./components/ContainerMovieGenero/ContainerMovieGenero.jsx";
 import MovieCarousel from "./components/MovieCarousel/MovieCarousel.jsx";
 import MovieID from "./components/movieID/movieID.jsx";
+import CreateMovieForm from "./components/createMovieForm/CreateMovieForm.jsx";
 
 function App() {
   const [searchValue, setSearchValue] = useState("");
@@ -29,10 +30,7 @@ function App() {
             path="/"
             element={
               <>
-                <MovieCarousel genreId={27} genreName={"Terror"} />
-                <MovieCarousel genreId={12} genreName={"Aventura"} />
-                <MovieCarousel genreId={16} genreName={"Animación"} />
-                <MovieCarousel genreId={35} genreName={"Comedia"} />
+                <MovieCarousel genreId={1} genreName={"Terror"} />
               </>
             }
           />
@@ -46,6 +44,11 @@ function App() {
             path="/genero/:id"
             element={<ContainerMovieGenero searchV={searchValue} />}
           />
+        </Routes>
+
+        <Routes>
+          {/* ... tus otras rutas ... */}
+          <Route path="/crear-pelicula" element={<CreateMovieForm />} />
         </Routes>
         <Footer className="position-absolute p-0 w-100" />
       </div>
