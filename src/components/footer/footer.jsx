@@ -3,17 +3,18 @@ import ItemFooter from "./itemFooter";
 import "../../estilos/footer.css";
 
 function Footer() {
-  const items = ["NUESTROS INSTRAGRAM", "@lucero.miguel", "@vgpedrooo"];
-  const items2 = ["CONTACTANOS", "link1", "link2", "link3"];
   return (
-    <div className="footerr pt-5 d-flex flex-column p-2">
-      <div className="d-flex gap-3 p-2 justify-content-between">
-        <img className="logof" src="./images/cineslll.png" alt="Logo" />
-        <ItemFooter parametro={items} />
-        <ItemFooter parametro={items2} />
+    <div className="footerr pt-3 d-flex flex-column">
+      <div className="d-flex justify-content-between">
+        <img className="logof ms-5" src="./images/cineslll.png" alt="Logo" />
+        <div className="me-5">
+          <a href="https://twitter.com/MoviesCineSL" target="_blank">
+            <img className="logot" src="./images/twitter.png" alt="Logo" />
+          </a>
+        </div>
       </div>
-      <div className="d-flex justify-content-center ">
-        <h4>CINESL pintesa - All right reserved</h4>
+      <div className="d-flex justify-content-center">
+        <h4>CINESL - All right reserved</h4>
       </div>
     </div>
   );

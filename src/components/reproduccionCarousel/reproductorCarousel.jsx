@@ -7,8 +7,8 @@ export default function VideoPlayer({ videoUrl }) {
       marginWidth="0"
       marginHeight="0"
       scrolling="NO"
-      width="640"
-      height="360"
+      width="960"
+      height="540"
       allowFullScreen
     ></iframe>
   );

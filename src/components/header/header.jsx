@@ -36,7 +36,7 @@ export default function Header({ onSearch }) {
 
   return (
     <div className="navbar-area">
-      <div className="container">
+      <div className="container mb-2">
         <nav className="site-navbar d-flex justify-content-between align-items-center">
           <div>
             <img
@@ -110,16 +110,18 @@ export default function Header({ onSearch }) {
 
           <form className="search-form" onSubmit={handleSearchSubmit}>
             <div className="search-group">
-              <input
-                onChange={handleSearchValue}
-                value={search}
-                type="text"
-                placeholder="Buscar películas..."
-                className="search-input"
-              ></input>
-              <button type="submit" className="search-button">
-                <FaSearch />
-              </button>
+              <div className="search-container">
+                <input
+                  onChange={handleSearchValue}
+                  value={search}
+                  type="text"
+                  placeholder="Buscar películas..."
+                  className="search-input"
+                />
+                <button type="submit" className="search-button">
+                  <FaSearch />
+                </button>
+              </div>
             </div>
           </form>
           <button

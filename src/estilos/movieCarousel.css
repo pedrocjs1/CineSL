@@ -2,7 +2,16 @@
   padding: 10px;
 }
 
-.slick-prev,
+.p-5 {
+  background-color: #0b1a19;
+}
+
+.imgg {
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+
+.mov .slick-prev,
 .slick-next {
   color: #fff;
   font-size: 24px;
@@ -10,7 +19,7 @@
 
 .slick-prev:before,
 .slick-next:before {
-  color: #fff;
+  color: #14d48c;
 }
 
 .slick-dots li button:before {
@@ -20,6 +29,7 @@
 .btn-carousel {
   background: none;
   color: #fff;
+  font-weight: 600;
   border: none;
 }
 
@@ -46,11 +56,9 @@
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 30%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.7) 30%,
+      rgba(0, 0, 0, 0) 100%);
   /* Degradado de negro a transparente */
   padding: 5px 10px;
   border-radius: 5px;
@@ -58,8 +66,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-width: 101%;
-  max-width: 300px;
+  min-width: 100%;
+  max-width: 100px;
+  font-weight: 600;
   text-align: center;
 }
 

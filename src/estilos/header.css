@@ -1,6 +1,4 @@
 .navbar-area {
-  /*position: fixed; //fixed-top dsadsadsa
-    top: 0;*/
   left: 0;
   width: 100%;
   background-color: transparent;
@@ -10,17 +8,15 @@
 
 .main-content {
   margin-top: 80px;
-  /* la altura del navbar + un margen adicional */
 }
 
-/*.site-navbar { litochau
-    display: flex; //d-flex
-    justify-content: space-between; //justify-content-between
-    align-items: center; //align-items-center
-  }*/
+a {
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 a.site-logo {
   font-size: 26px;
-  font-weight: 800;
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
@@ -45,9 +41,6 @@ a.site-logo {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* navbar regular css end */
-
-/* nav-toggler css start */
 .nav-toggler {
   border: none;
   padding: 5px;
@@ -114,8 +107,10 @@ a.site-logo {
 }
 
 .aSubmenu {
-  font-size: 13px;
+  font-size: 14px;
   color: #c6d6d6;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .submenu {
@@ -128,7 +123,6 @@ a.site-logo {
   width: 15rem;
   overflow-y: auto;
   z-index: 2;
-  /* Ajusta según sea necesario */
 }
 
 .logo {
@@ -145,59 +139,50 @@ a.site-logo {
   position: relative;
 }
 
-/* En tu archivo CSS o SCSS */
-.search-form {
-  display: flex;
-  align-items: center;
-}
-
-.search-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 10px;
-  width: 400px;
-  /* Ajusta según tus necesidades */
-}
-
-.search-button {
-  padding: 10px;
-  background-color: #a92727;
-  /* Color del botón */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .search-group {
   position: relative;
-  display: flex;
 }
 
 .search-input {
-  padding: 10px 40px 10px 10px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  width: 100%;
+  padding-right: 30px;
+  font-size: 16px;
+  transition: width 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+  width: 0;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
 }
 
 .search-button {
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border: none;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
   background: transparent;
-  padding: 10px 17px 10px 10px;
+  border: none;
   cursor: pointer;
-  color: #555;
+  font-size: 16px;
+  color: #10d68a;
+  transition: color 0.3s ease;
 }
 
-.search-button svg {
-  width: 20px;
-  height: 20px;
+.search-group:hover .search-input {
+  width: 200px;
+  padding-right: 10px;
+  background-color: #000;
+  border: 1px solid #10d68a;
+  color: #fff;
+  border-radius: 8px;
 }
+
+/* AAAAAAAAAAAAAAAH ISSIISISISISISISISISISISISISISISISISI COMO SABERTO*/
+.search-input,
+.search-button {
+  user-select: none !important;
+}
+
+
+
 
 @media screen and (max-width: 1400px) {
   .logo {

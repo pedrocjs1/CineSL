@@ -47,10 +47,16 @@ body {
   height: 66.6px;
 }
 
+.logot {
+  width: 99.8px;
+  height: 99.8px;
+}
+
 .footerr {
   background-color: #000;
-  color: #dee7e7;
+  color: #ffffff;
   padding: 20px;
   border-top: 1px solid #000;
-  margin-top: auto; /* Mantiene el footer en la parte inferior */
+  margin-top: auto;
+  /* Mantiene el footer en la parte inferior */
 }
