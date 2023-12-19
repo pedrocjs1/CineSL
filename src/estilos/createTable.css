@@ -1,0 +1,22 @@
+#miTabla {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 20px;
+}
+
+#miTabla th,
+#miTabla td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: #000000;
+}
+
+#miTabla th {
+    background-color: #f2f2f2;
+}
+
+#miTabla img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getMoviesForGeneros } from "../../data/httpClient";
+import "../../estilos/createTable.css";
 
 const CreateTable = () => {
   const [movies, setMovies] = useState([]);
@@ -7,6 +8,7 @@ const CreateTable = () => {
   const [selectedGenres, setSelectedGenres] = useState(
     new Array(8).fill(false)
   );
+  const [searching, setSearching] = useState(false);
 
   const genreNames = [
     "ACCIÓN",
@@ -20,40 +22,40 @@ const CreateTable = () => {
   ];
 
   useEffect(() => {
-    // Esta función debería ser llamada cuando se selecciona un género o se busca.
     const fetchMovies = async () => {
       try {
-        // Obtener el ID de género seleccionado (o IDs si quieres buscar por múltiples géneros)
         const genreIds = selectedGenres
           .map((selected, index) => (selected ? index + 1 : null))
           .filter(Boolean);
 
-        // Aquí puedes ajustar tu solicitud al backend para obtener películas por género
-        const response = await getMoviesForGeneros(genreIds); // Ajusta esta parte para que coincida con tu backend
+        const response = await getMoviesForGeneros(genreIds);
         setMovies(response.data);
+        setSearching(false); // Después de cargar las películas, indicamos que no estamos buscando
       } catch (error) {
         console.error(error);
       }
     };
 
-    fetchMovies();
-  }, [selectedGenres]);
+    if (searching) {
+      // Solo realizar la búsqueda si estamos buscando
+      fetchMovies();
+    }
+  }, [selectedGenres, searching]);
 
-  // Manejar el cambio en los checkboxes de género
   const handleGenreChange = (position) => {
     const updatedSelectedGenres = selectedGenres.map((item, index) =>
       index === position ? !item : item
     );
     setSelectedGenres(updatedSelectedGenres);
+    setSearching(true); // Indicar que estamos buscando cuando se cambian los géneros
   };
 
-  // Manejar la búsqueda por término
-  const handleSearch = async () => {
-    // Implementar la lógica de búsqueda aquí
+  const handleSearch = () => {
+    setSearching(true); // Indicar que estamos buscando cuando se realiza una búsqueda
   };
 
   return (
-    <div className="text-white">
+    <div className="text-white d-flex flex-column justify-content-center align-items-center gap-3 mt-5">
       <input
         type="text"
         placeholder="Buscar películas"
@@ -61,9 +63,9 @@ const CreateTable = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button onClick={handleSearch}>Buscar</button>
-      <div>
+      <div className="d-flex gap-3">
         {genreNames.map((genre, index) => (
-          <label key={index}>
+          <label key={index} className="d-flex gap-1">
             {genre}
             <input
               type="checkbox"
@@ -73,7 +75,7 @@ const CreateTable = () => {
           </label>
         ))}
       </div>
-      <table>
+      <table id="miTabla">
         <thead>
           <tr>
             <th>ID</th>
@@ -87,24 +89,39 @@ const CreateTable = () => {
           </tr>
         </thead>
         <tbody>
-          {movies.map((movie) => (
-            <tr key={movie.id}>
-              <td>{movie.id}</td>
-              <td>{movie.titulo}</td>
-              <td>
-                <img
-                  src={movie.foto}
-                  alt={movie.titulo}
-                  style={{ width: "50px" }}
-                />
-              </td>
-              <td>{movie.descripcion}</td>
-              <td>{movie.idapi}</td>
-              <td>{new Date(movie.dateyear).toLocaleDateString()}</td>
-              <td>{movie.valoracion}</td>
-              <td>{movie.genero}</td>
-            </tr>
-          ))}
+          {searching ? (
+            Array.from({ length: 5 }, (_, rowIndex) => (
+              <tr key={rowIndex}>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            ))
+          ) : (
+            movies.map((movie) => (
+              <tr key={movie.id}>
+                <td>{movie.id}</td>
+                <td>{movie.titulo}</td>
+                <td>
+                  <img
+                    src={movie.foto}
+                    alt={movie.titulo}
+                    style={{ width: "50px" }}
+                  />
+                </td>
+                <td>{movie.descripcion}</td>
+                <td>{movie.idapi}</td>
+                <td>{new Date(movie.dateyear).toLocaleDateString()}</td>
+                <td>{movie.valoracion}</td>
+                <td>{movie.genero}</td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>
@@ -112,3 +129,4 @@ const CreateTable = () => {
 };
 
 export default CreateTable;
+
